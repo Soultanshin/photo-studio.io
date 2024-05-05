@@ -1,0 +1,172 @@
+@import "_common";
+
+footer {
+  .site-author {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 30px;
+    border-bottom: 1px solid @hover-color;
+    color: @hover-color;
+    line-height: 1.6;
+
+    .author-info {
+      width: 30%;
+      border-right: 1px solid @hover-color;
+      padding: 0 20px 20px 0;
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: @light-color;
+        margin-bottom: 20px;
+      }
+    }
+
+    .quick-links {
+      width: 30%;
+      border-right: 1px solid @hover-color;
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: @light-color;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        li {
+          margin-bottom: 20px;
+
+          a {
+            transition: .3s ease-in-out;
+
+            &:hover {
+              color: @light-color;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: @light-color;
+        margin-bottom: 20px;
+      }
+
+      .tel {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+
+        &::before {
+          position: absolute;
+          content: '';
+          background-image: url("../img/footer-contacts-ico/phone-fill.svg");
+          width: 20px;
+          height: 20px;
+          left: -5px;
+          bottom: 0;
+        }
+      }
+
+      .email {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          background-image: url("../img/footer-contacts-ico/mail-fill.svg");
+          width: 20px;
+          height: 20px;
+          left: -5px;
+          bottom: 0;
+        }
+      }
+
+      .address {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 30px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          background-image: url("../img/footer-contacts-ico/contacts-book-3-fill.svg");
+          width: 20px;
+          height: 20px;
+          left: -5px;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: @hover-color;
+    padding-bottom: 30px;
+    .socials{
+      a{
+        img{
+          height: 30px;
+          width: 30px;
+          margin: 10px;
+          &:hover{
+            filter: invert(1);
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (width < 640px ) {
+  footer{
+    .site-author{
+      flex-direction: column;
+      .author-info{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid @hover-color;
+      }
+      .quick-links{
+        border-right: none;
+        width: 100%;
+        border-bottom: 1px solid @hover-color;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

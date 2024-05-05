@@ -1,0 +1,77 @@
+@import "_common";
+
+header {
+  background-color: @bg-color;
+
+  .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: @light-color;
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 2;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+      padding: 0;
+
+      a {
+        color: @hover-color;
+        display: inline-block;
+        padding: 15px 0;
+        font-weight: 400;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          color: @light-color;
+        }
+      }
+    }
+    .hidden-menu-ico{
+      display: none;
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media (width < 700px ) {
+  header{
+    .header-content {
+      position: relative;
+      .menu{
+        position: fixed;
+        flex-direction: column;
+        width: 90%;
+        left: 0;
+        top: 48px;
+        align-items: center;
+        margin: 0;
+        gap: 0;
+        background-color: @bg-color;
+        transition: .3s ease-in-out;
+        transform: translateY(-450px);
+        z-index: 999;
+        & li:last-child{
+          margin-bottom: 30px;
+        }
+      }
+      .top-menu-hidden{
+        transition: .3s ease-in-out;
+        transform: translateY(0);
+      }
+      .hidden-menu-ico{
+        display: flex;
+        cursor: pointer;
+      }
+    }
+  }
+}

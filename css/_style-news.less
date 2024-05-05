@@ -1,0 +1,98 @@
+@import "_common";
+
+.news{
+  margin-bottom: 100px;
+  .news-content{
+    margin-top: 100px;
+    .title-block{
+      width: 50%;
+      .title{
+        font-size: 32px;
+        font-weight: 800;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid @hover-color;
+      }
+      .description{
+        color: @hover-color;
+        margin-bottom: 50px;
+      }
+    }
+    .picture-block{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 510px;
+      justify-content: center;
+      .news-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        background-color: @light-color;
+        padding: 0 30px;
+        .resources{
+          align-self: start;
+          background-color: @primary-color;
+          color: @light-color;
+          font-size: 13px;
+          padding: 15px;
+          margin-bottom: 30px;
+        }
+        .news-title{
+          align-self: start;
+          font-size: 22px;
+          margin-bottom: 30px;
+        }
+        .news-text{
+          color: @hover-color;
+          padding: 30px 0;
+          border-bottom: 1px solid @hover-color;
+          align-self: start;
+        }
+        .continue{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          margin-top: 30px;
+          margin-bottom: 50px;
+          a{
+            color: @primary-color;
+          }
+          p{
+            color: @hover-color;
+          }
+        }
+      }
+      img{
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 720px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media (width < 640px ) {
+  .news{
+    .news-content{
+      margin-top: 50px;
+      .title-block{
+        width: 100%;
+        text-align: center;
+      }
+      .picture-block{
+        border: 1px solid @hover-color;
+        height: auto;
+        img{
+          display: none;
+        }
+      }
+    }
+  }
+}

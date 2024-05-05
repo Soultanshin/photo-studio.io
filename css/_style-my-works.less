@@ -1,0 +1,50 @@
+@import "_common";
+
+.my-works{
+  background-color: @bg-color;
+  .my-works-content{
+    .title{
+      font-size: 32px;
+      font-weight: 800;
+      color: @light-color;
+      margin-bottom: 30px;
+      padding-top: 100px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid @hover-color;
+      width: 100%;
+      max-width: 600px;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      color: @hover-color;
+      padding-bottom: 50px;
+      li{
+        a{
+          transition: .3s ease-in-out;
+          &:hover{
+            color: @light-color;
+          }
+        }
+      }
+    }
+    .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding-bottom: 100px;
+      img{
+        width: 100%;
+        max-width: 300px;
+        object-fit: cover;
+        filter: brightness(50%);
+        transition: .3s ease-in-out;
+        &:hover{
+          filter: unset;
+        }
+      }
+    }
+  }
+}
